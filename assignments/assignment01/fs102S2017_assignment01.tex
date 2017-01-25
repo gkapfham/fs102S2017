@@ -1,0 +1,160 @@
+\input{102pre.tex}
+
+\usepackage[compact]{titlesec}
+
+\begin{document}
+
+\MYTITLE{Assignment 1\\Assigned: Wednesday, January 25, 2017\\Due: Monday, January 30, 2017 at the start of class}
+
+\vspace*{-.2in}
+\section*{Introduction}
+
+Writers and presenters on the cutting-edge of technology often use a version control system to manage the artifacts
+produced during the phases of drafting and delivering an article or a talk. In this writing assignment, you will learn
+how to use the GitHub service to create and populate a Git repositories with the {\tt git} command-line tool in the
+Ubuntu operating system and the Atom text editor. In particular, you will create an ``About Me'' article in a {\tt
+README.md} file of a new Git repository, add a header graphic to the Git repository and then reference the graphic in
+the {\tt README.md} file. Please carefully adhere to the following guidelines for success when you are completing this
+practical assignment and all of the subsequent writing, speaking, and practical assignments.
+
+\vspace*{-.1in}
+\begin{itemize}
+  \setlength{\itemsep}{-.01in}
+
+\item {\bf If possible, use the laboratory computers.} If it is absolutely necessary for you to work on a different
+  machine, be sure to regularly transfer your programs to the Alden machines and check their correctness. Please
+  remember that, as stated in the syllabus, students should try to complete assignments using the specialized
+  workstations in the laboratory. If you cannot use a laboratory computer, then please carefully explain the setup of
+  your laptop to a teaching assistant or the course instructor when you are asking questions.
+
+\item {\bf Follow each step carefully.} Slowly read each sentence in every assignment sheet, making sure that you
+  precisely follow each instruction. Take notes about each step that you attempt, recording your questions and ideas
+  and the challenges that you faced. If you are stuck, then please tell a teaching assistant or instructor what step
+  you recently completed.
+
+\item {\bf Regularly ask and answer questions.} Please log into Slack at the start of a class or practical session and
+  then join the appropriate channel. If you have a question about one of the steps in an assignment, then you can post
+  it to the designated channel. Or, you can ask a student sitting next to you or talk with a teaching assistant or the
+  course instructor.
+
+\item {\bf Store your files in Git}. Starting with this laboratory assignment, you will be responsible for storing all
+  of your files in a Git repository. Please verify that you have saved your source code in your Git repository by
+  typing ``{\tt git status}'' and ensuring everything is up to date.
+
+\item {\bf Keep all of your files!} Don't delete your programs, output files, and reports after you hand them in---you
+  will need them again later when you study for the quizzes and examinations and work on the other laboratory,
+  practical, and final project assignments.
+
+\item {\bf Back up your files regularly}. Use a flash drive, Google Drive, or your favorite backup method to keep a
+  copy of your files in reserve. In the event of a system failure, you are responsible for ensuring that you have
+  access to a recent backup copy of all your files.
+
+% \item {\bf Review the Honor Code policy on the syllabus.} Remember that you may discuss programs with others, but
+%   copying programs is a violation of the College's Honor Code.
+
+\end{itemize}
+
+\section*{Configuring Git and GitHub}
+
+During this practical assignment and subsequent assignments, we will securely communicate with the GitHub.com servers
+that will host all of our projects. In this practical assignment, we will perform all of the steps to configure the
+accounts on the departmental servers and the GitHub service. Throughout this assignment, you should refer to the
+following web site for additional information: \url{https://guides.github.com/activities/hello-world/}. As you will be
+required to use Git in the remaining writing, speaking, and practical assignments and during the class sessions, please
+be sure to keep a record of all of the steps that you complete and the challenges that you face. You are also
+responsible for communicating with other students to ensure that everyone is able to successfully complete each of the
+steps outlined in this assignment.
+
+\begin{enumerate}
+
+  \item If you do not already have a GitHub account, then please go to the GitHub web site and create one---make
+    sure that you use your {\tt allegheny.edu} email address so that you can join the GitHub Educational Community as
+    this step becomes necessary. Also, please make sure that you add a description of yourself and an appropriate
+    professional photograph to your GitHub profile. For examples of what a professional GitHub profile might look like,
+    please consider studying {\tt https://github.com/una} and {\tt https://github.com/gkapfham}.
+
+  \item If you have never done so before, you must use the {\tt ssh-keygen} program to create secure-shell keys that you
+    can use to support your communication with the GitHub servers. But, to start, this task requires you to type
+    commands in a program that is known as a terminal. To run it, on the left side of your screen, click on the icon
+    that contains the ``{\tt >}'' symbol. Alternatively, you can type the ``Super'' key, start typing the word
+    ``terminal'', and then select that program. Another way to open a terminal involves typing the key combination {\tt
+    <Ctrl>-<Alt>-t}.
+
+  \item If you have not done so already, you will now need to run the {\tt ssh-keygen} command in your terminal window.
+    Follow the prompts to create your keys and save them in the default directory (press ``Enter'' after you are
+    prompted: ``{\tt Enter file in which to save the key ...  :}'', then press ``Enter'' twice if you do not wish to
+    create a passphrase at this time or type your selected passphrase if you do). What files does {\tt ssh-keygen}
+    produce? Where does this program store these files by default? Do you have questions about this step?
+
+  \item Once you have created your ssh keys, you should raise your hand to invite either a teaching assistant or the
+    course instructor to help you with the next steps. First, you must log into GitHub and look in the right corner for
+    an account avatar with a down arrow. Click on this link and then select the ``Settings'' option. Now, scroll down
+    until you found the ``SSH and GPG keys'' label on the left, click create a new ``SSH key'', and then upload your ssh
+    key to GitHub. You can copy your to SSH key to the clipboard by going to the terminal and typing ``{\tt cat
+    \textasciitilde{}/.ssh/id\_rsa.pub}'' command and then highlighting this output. When you are completing this step
+    in your terminal window, please make sure that you only highlight the letters and numbers in your key---if you
+    highlight any extra symbols or spaces then this step may not work correctly. Then, paste this into the text field in
+    your web browser.
+
+  \item Again, when you are completing these steps, please make sure that you take careful notes about the inputs,
+    outputs, and behavior of each command. If there is something that you do not understand, then please ask the course
+    instructor or the teaching assistant about it.
+
+  \item Since this is your first practical assignment and you are still learning how to use the appropriate software,
+    don't become frustrated if you make a mistake. Instead, use your mistakes as an opportunity for learning both about
+    the necessary technology and the background and expertise of the other students in the class, the teaching
+    assistants, and the course instructor. Remember, you can use Slack to talk with the instructor by using ``{\tt
+    @gkapfham}'' in a channel.
+
+\end{enumerate}
+
+\vspace*{-.15in}
+\section*{Critiquing the Writing on a Web Site}
+
+In this next phase of this assignment, you should first go to the web site of the course instructor, which is available
+at {\tt http://www.cs.allegheny.edu/sites/gkapfham/}. Next, you should browse this site so that you can locate the
+GitHub repository that the instructor uses to store all of the source code for the web site. Now, you should take time
+to use your web browser to look through the different directories of source code. What is source code? Can you find a
+source code file and explain to another person in the class how it is connected to a page on the instructor's web site?
+
+Using both a mobile device and either a desktop or laptop computer, you should read many of the pages on the course
+instructor's web site. As you are doing this, you try to answer the questions from the ``Introduction'' slides in module
+one on the course web site. Then, start to read this web site and identify mistakes in the writing, find ways to improve
+its color, layout, and use of fonts, or assess whether the site is fully mobile-ready. Next, you should identify a
+mistake or an enhancement that you would like to see the course instructor implement in a future version of the site.
+Once you know what your ``issue'' is for the instructor's web site, go to its GitHub repository and click the ``Issues''
+tab on the left side of the page. Using precise, error-free, and compelling language, use the GitHub issue tracker to
+fully describe your issue concerning this site.
+
+Once you have finished writing your issue, you should carefully review it using the ``Preview'' tab of the text area.
+After you are confident that the writing is precise and error-free, please click the green ``Submit new issue'' button.
+Next, you should read the issues that have been raised by the other students in the class and comment on at least one of
+them. Do you agree with the points that are raised by your colleague? If you do, then add your persuasive argument as to
+why this issue should be resolved in the next version of the site. If you disagree with a point made by another
+issue-raiser, then persuasively argue why a different approach should be adopted instead.
+
+\vspace*{-.05in}
+\section*{Summary of the Required Deliverables}
+
+This practical assignment invites you to complete the following tasks:
+
+\vspace*{-.1in}
+\begin{enumerate}
+  \setlength{\itemsep}{0in}
+
+  \item Create a professional GitHub profile that will host all of your writing and presentations.
+  \item Upload your ssh key to the GitHub system, in support of completing the later assignments.
+  \item Review the source code, design, layout, and writing on the course instructor's web site.
+  \item Raise at least one publicly-visible issue on the GitHub repository for the instructor's web site.
+
+\end{enumerate}
+\vspace*{-.1in}
+
+In adherence to the Honor Code, students should complete this assignment on an individual basis. While it is appropriate
+for students in this class to have high-level conversations about the assignment, it is necessary to distinguish
+carefully between the student who discusses the principles underlying a problem with others and the student who produces
+assignments that are identical to, or merely variations on, someone else's work. Any deliverables that are nearly
+identical to the work of others will be taken as evidence of violating Allegheny College's \mbox{Honor Code}.
+
+
+\end{document}
