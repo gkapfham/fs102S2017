@@ -129,6 +129,28 @@ phase of the assignment, please visit and read the following web site: \url{http
     user name (which should be, if possible, the same as your {\tt allegheny.edu} email user name) or you are not sure
     how to rename the repository.
 
+  \item Using SSH --- and not HTTPS! --- you should now clone the repository to your laboratory computer. You will do
+    this by clicking the green ``Clone'' button, copying the address to the clipboard, and then typing ``{\tt git
+    clone}'' and then pasting the address in your terminal window. At this point, you should see the download of the
+    source code for your new web site to your workstation. Ask the instructor for help if you think that this did not
+    work correctly.
+
+  \item Next, you should change into the directory for your web site's repository and type the command ``{\tt bundle
+    install --path ~/.gem}'' and wait for all of the needed packages to install correctly on your computer workstation.
+    Since this command may take a long time to run, you should start it now and then, if necessary, move to the next
+    step.
+
+  \item Once the packages have installed correctly, you can type ``{\tt bundle exec jekyll server}'' to transform the
+    markdown of your web site into HTML and to start a local web server that you can use to preview your site. If this
+    command works, then you can access the web server by typing {\tt http://127.0.0.1:4000} into your web browser. Can
+    you see a web site now?
+
+  \item After you have gained access to the local (i.e., ``development'') version of your web site, it is also a good
+    idea to view the version that is currently hosted by GitHub and thus publicly available. To accomplish this step,
+    you should return to your web browser and go into the settings for your GitHub repository. Now, scroll down until
+    you see the part of the screen with the label ``GitHub Pages'' and make sure that you are serving content from the
+    master branch of your repository.
+
 \end{enumerate}
 
 \vspace*{-.05in}
