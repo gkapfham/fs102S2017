@@ -154,16 +154,41 @@ phase of the assignment, please visit and read the following web site: \url{http
     click on this link and then view the public version of your site!
 
   \item If you still have the ``{\tt bundle exec jekyll server}'' command running, you can shut it down by typing ``{\tt
-    CTRL-c}'' in your terminal window. Now, start atom and load the file called {\tt \_config.yml}. In this file, you
+    CTRL-c}'' in your terminal window. Now, start Atom and load the file called {\tt \_config.yml}. In this file, you
     should change the fields for the URL, title, and description to correspond to values that are correct for your web
     site. In the section for the links in the navigation bar, you should (at least for now) delete all of them except
     for the one to ``{\tt aboutme}''. Finally, go to the bottom of this file and provide information for all of your
     social media accounts and your contact information. Please be sure that if you have, for instance, a Twitter account
     that you set the flag for this to {\tt true} in the configuration file.
 
+  \item Now, please locate the ``About Me'' Markdown file that you completed in a previous assignment. Using Atom, copy
+    the contents of this file to the clipboard. Next, locate the file called ``{\tt aboutme.md}'', delete the content in
+    this file --- while taking care not to delete the header information at the top of the file --- and paste in the
+    material from your previous assignment. To complete this step, you should also update the header so that it contains
+    appropriate descriptive details for this file. Now, go back to your terminal window and run ``{\tt bundle exec
+    jekyll server}'' and reload the locally-served content in your web browser.
+
+  \item If you can see changes to the content, then you will have confirmation that your edits are working correctly.
+    Before making this writing publicly available, you should carefully check it to ensure that it is compelling and
+    error-free. After fixing any mistakes that you noticed, please use the ``{\tt git commit}'' and ``{\tt git push}''
+    commands to ensure that your new content is also on the version of your site hosted by GitHub. Can you correctly
+    view your new site?
+
+  \item Finally, if you look in the GitHub repository for your new web site, you will notice that it still has the {\tt
+    README.md} file that came with the original version of the ``Beautiful Jekyll'' template. You should delete the
+    majority of the content in this file and add in some of your own original content. While it is appropriate for you
+    to acknowledge that you created your web site with the help of this template, you should customize the {\tt
+    README.md} with the steps that someone would need to take to download and fully use your new web site. You can use
+    the content in this assignment sheet as a source for the content that you write in this file.
+
+  \item After you have a working version of your web site, please paste the reference to the GitHub repository and to
+    the web site into the {\tt \#web} channel of our Slack team. Then, please review the web site to at least one other
+    member of the course. Once find a way to improve the your colleague's writing, please raise an issue in the issue
+    tracker of their GitHub repository.
+
 \end{enumerate}
 
-\vspace*{-.05in}
+\vspace*{-.175in}
 \section*{Summary of the Required Deliverables}
 
 This practical assignment invites you to complete the following tasks:
@@ -172,19 +197,16 @@ This practical assignment invites you to complete the following tasks:
 \begin{enumerate}
   \setlength{\itemsep}{0in}
 
-  \item Create a professional GitHub profile that will host all of your writing and presentations.
-  \item Upload your ssh key to the GitHub system, in support of completing the later assignments.
-  \item Review the source code, design, layout, and writing on the course instructor's web site.
-  \item Raise at least one publicly-visible issue on the GitHub repository for the instructor's web site.
+  \item A cloned version of the ``Beautiful Jekyll'' template that is customized for your web site.
+  \item A new ``About Me'' page that contains the revised version of your previous writing assignment.
+  \item A customized version of the {\tt README.md} file that is in your web site's repository.
+  \item An issue that you raised in the GitHub issue tracker for your colleague's web site.
 
 \end{enumerate}
 \vspace*{-.1in}
 
-In adherence to the Honor Code, students should complete this assignment on an individual basis. While it is appropriate
-for students in this class to have high-level conversations about the assignment, it is necessary to distinguish
-carefully between the student who discusses the principles underlying a problem with others and the student who produces
-assignments that are identical to, or merely variations on, someone else's work. Any deliverables that are nearly
-identical to the work of others will be taken as evidence of violating Allegheny College's \mbox{Honor Code}.
-
+In adherence to the Honor Code, you should complete this practical assignment on an individual basis. While you may have
+high-level conversations with others, any deliverables that are nearly identical to the work of others will be taken as
+evidence of violating Allegheny College's \mbox{Honor Code}.
 
 \end{document}
