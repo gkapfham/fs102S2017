@@ -1,0 +1,160 @@
+\input{102pre.tex}
+
+\usepackage[compact]{titlesec}
+
+\begin{document}
+
+\MYTITLE{Assignment 2\\Assigned: Wednesday, February 8, 2017\\Due: Wednesday, February 15, 2017 at the start of class}
+
+\vspace*{-.2in}
+\section*{Introduction}
+
+Writers and presenters on the cutting-edge of technology use a version control system to manage, in a principled
+fashion, the artifacts produced during the phases of drafting and delivering an article or a talk. In this writing
+assignment, you will learn how to use the GitHub service to create and populate a Git repository with the {\tt git}
+command-line tool and the Atom text editor. In particular, you will create an ``About Me'' article in a {\tt README.md}
+file of a newly-created Git repository, add a header graphic to the Git repository and then correctly reference the
+graphic in the {\tt README.md} file. Please carefully adhere to the following guidelines for success when you are
+completing this writing assignment and all of the subsequent writing, speaking, and practical assignments.
+
+\vspace*{-.1in}
+\begin{itemize}
+  \setlength{\itemsep}{-.01in}
+
+\item {\bf If possible, use the laboratory computers.} If it is absolutely necessary for you to work on a different
+  machine, be sure to regularly transfer your programs to the Alden machines and check their correctness. Please
+  remember that, as stated in the syllabus, students should try to complete assignments using the specialized
+  workstations in the laboratory. If you cannot use a laboratory computer, then please carefully explain the setup of
+  your laptop to a teaching assistant or the course instructor when you are asking questions.
+
+\item {\bf Follow each step carefully.} Slowly read each sentence in every assignment sheet, making sure that you
+  precisely follow each instruction. Take notes about each step that you attempt, recording your questions and ideas
+  and the challenges that you faced. If you are stuck, then please tell a teaching assistant or instructor what step
+  you recently completed.
+
+\item {\bf Regularly ask and answer questions.} Please log into Slack at the start of a class or practical session and
+  then join the appropriate channel. If you have a question about one of the steps in an assignment, then you can post
+  it to the designated channel. Or, you can ask a student sitting next to you or talk with a teaching assistant or the
+  course instructor.
+
+\item {\bf Store your files in Git}. Starting with this laboratory assignment, you will be responsible for storing all
+  of your files in a Git repository. Please verify that you have saved your source code in your Git repository by
+  typing ``{\tt git status}'' and ensuring everything is up to date.
+
+\item {\bf Keep all of your files!} Don't delete your programs, output files, and reports after you hand them in---you
+  will need them again later when you study for the quizzes and examinations and work on the other laboratory,
+  practical, and final project assignments.
+
+\item {\bf Back up your files regularly}. Use a flash drive, Google Drive, or your favorite backup method to keep a
+  copy of your files in reserve. In the event of a system failure, you are responsible for ensuring that you have
+  access to a recent backup copy of all your files.
+
+\end{itemize}
+
+\section*{Disciplined Writing with Version Control}
+
+During this practical assignment and subsequent assignments, we will securely communicate with the GitHub.com servers
+that will host all of our projects. If you have not done so already, please perform all of the steps to configure the
+accounts on the departmental servers and the GitHub service. Throughout this assignment, you should refer to the
+following web site for additional information: \url{https://guides.github.com/activities/hello-world/}. As you will be
+required to use Git in all of the writing, speaking, and practical assignments and during the class sessions, please be
+sure to keep a record of all of the steps that you complete and the challenges that you face. You should also
+communicate, under the confines of the Honor Code, with other students to ensure that everyone is able to
+successfully complete each of the steps outlined in this assignment.
+
+\begin{enumerate}
+
+  \itemsep 0em
+
+  \item If you do not already have a GitHub account, then please go to the GitHub web site and create one---make
+    sure that you use your {\tt allegheny.edu} email address so that you can join the GitHub Educational Community as
+    this step becomes necessary. Also, please make sure that you add a description of yourself and an appropriate
+    professional photograph to your GitHub profile. For examples of what a professional GitHub profile might look like,
+    please consider studying {\tt https://github.com/una} and {\tt https://github.com/gkapfham}.
+
+  \item If you have not already done so, please make sure that your SSH key is correctly uploaded to the GitHub servers
+    and that you are ready to create your own GitHub repository. If you are not sure how to complete this step, please
+    ask the course instructor or a teaching assistant.
+
+  \item Again, when you are completing these steps, please make sure that you take careful notes about the inputs,
+    outputs, and behavior of each command. If there is something that you do not understand, then please ask the course
+    instructor or the teaching assistant about it.
+
+  \item Since this is your first writing assignment and you are still learning how to use the appropriate software,
+    don't become frustrated if you make a mistake. Instead, use your mistakes as an opportunity for learning both about
+    the necessary technology and the background and expertise of the other students in the class, the teaching
+    assistants, and the course instructor. Remember, you can use Slack to talk with the instructor by using ``{\tt
+    @gkapfham}'' in a channel.
+
+  \item Now, use your web browser to go to your GitHub profile and click the ``Repositories'' label near the top of the
+    screen. Next, find and click the green button with the ``New'' label. At this point, you can create a new repository
+    with the name ``about-me'', ensuring that it is a public repository that is initialized with an empty {\tt
+    README.md} file. You can now click the ``Edit'' button and type in a brief description for this repository that will
+    contain an article that introduces yourself to your audience. In a subsequent assignment, we will add the content
+    that you create for this assignment to your own mobile-ready web site.
+
+  \item Now that your Git repository is initialized on the GitHub servers, it is time to ``clone'' it so that it is
+    editable on laboratory computer. Click the green ``Clone'' button, highlight the command in the text area, copy this
+    command to the clipboard, and open your terminal window. If you have not done so already, then create a {\tt
+    fs102S017} directory and change into it. Next, type the words ``{\tt git clone}'' in your terminal window and then
+    paste the command that you copied from GitHub's interface. At this point, you should see that your repository has
+    downloaded to your computer from the GitHub server. Please see the course instructor or a teaching assistant if you
+    are not able to successfully complete this step.
+
+  \item Make sure that you can find the {\tt README.md} file that has been downloaded to your computer. To edit this
+    file, you will need to use the {\tt atom} text editor by typing ``{\tt atom README.md}'' in your terminal window.
+    After you modify this file --- perhaps by adding a new sentence or revising and existing sentence --- you should use
+    the ``{\tt git add}'' and ``{\tt git commit}'' and ``{\tt git push}'' commands to transfer your content to the
+    GitHub servers. Please make sure that you write and revise in an incremental fashion, committing and pushing your
+    sentences on a regular basis --- generally, small modifications are bigger than large ones because they make it
+    easier for you and your editor to track and comment on your developing article.
+
+  \item The writing assignment that you must complete requires you to write three to five paragraphs about yourself and
+    how your life connects to the theme of this course, ``Software Everywhere''. To get some inspiration on how you
+    should write this type of content, please review the ``Who is Guy?'' and ``Long Bio'' that is available at {\tt
+    http://guykawasaki.com/guy-kawasaki/}.
+
+  \item You should complete this assignment in collaboration with two editors. You will be responsible for asking these
+    two editors to read your writing and give you feedback through the GitHub issue tracker. An editor will provide
+    feedback through the issue tracker by clicking the ``Commits'' tab in GitHub's main interface, finding the commit
+    number that contains the issue that you have identified in the writing, copying this number to the clipboard, and
+    then using it when you report the issue. A writer will then consider the feedback, respond to it, and, when
+    appropriate, resolve the issue that the editor raised. Each writer should also review the writing of the other two
+    team members. While it is acceptable to read and mark printed versions of the article, all discussion should be
+    visible in the GitHub issue tracker.
+
+  \item Even though we will work on this assignment during at least two class sessions, you should budget enough time to
+    outline, draft, discuss, and frequently revise this writing assignment. Remember, your focus should be on publishing
+    an article that is concise, accessible, and error-free. Also, the main text of this writing assignment should be
+    accompanied by a ``TL;DR'' or a ``Too Long; Didn't Read'' that summarizes the key points about yourself. Please see
+    the instructor if you confront difficulties when using GitHub or if you have additional questions.
+
+\end{enumerate}
+
+\vspace*{-.05in}
+\section*{Summary of the Required Deliverables}
+
+This writing assignment invites you to complete the following tasks. After completing the assignment, please make sure
+that you submit a printed version of your article to the course instructor.
+
+\vspace*{-.1in}
+\begin{enumerate}
+  \setlength{\itemsep}{0in}
+
+  \item Create a professional GitHub profile that will host all of your writing and presentations.
+  \item Upload your ssh key to the GitHub system, in support of completing the later assignments.
+  \item Create a Git repository called {\tt about-me} and download it to your computer workstation.
+  \item Write a short three to five paragraph article introducing yourself and the course theme.
+  \item Review, through multiple GitHub issues and a full-featured discussion, your peers' writing.
+
+\end{enumerate}
+\vspace*{-.1in}
+
+In adherence to the Honor Code, students should complete this assignment on an individual basis. While it is appropriate
+for students in this class to have high-level conversations about the assignment, it is necessary to distinguish
+carefully between the student who discusses the principles underlying a problem with others and the student who produces
+assignments that are identical to, or merely variations on, someone else's work. Any deliverables that are nearly
+identical to the work of others will be taken as evidence of violating Allegheny College's \mbox{Honor Code}.
+
+
+\end{document}
