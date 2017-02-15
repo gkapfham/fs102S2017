@@ -1,0 +1,162 @@
+\input{102pre.tex}
+
+\usepackage[compact]{titlesec}
+
+\begin{document}
+
+\MYTITLE{Assignment 3\\Assigned: Wednesday, February 15, 2017\\Due: Wednesday, February 24, 2017 at the start of class}
+
+\vspace*{-.2in}
+\section*{Introduction}
+
+Now that you have created the first version of your mobile-ready web site and it is ``live'', you are ready to begin
+publishing written content. In this assignment, you will write the first article that will be featured on your web site.
+Consisting of between 800 and 1000 words, your article should contain approximately four or five paragraphs of writing.
+Additionally, your article will have both a header image that is released through Flickr under a Creative Commons
+License and a license statement for the image. Along with having a captivating title, a TL;DR, and links to other
+articles and web sites, your first feature article will be promoted through a social media campaign. In order to
+successfully complete this assignment, please carefully adhere to the following guidelines.
+
+\vspace*{-.1in}
+\begin{itemize}
+  \setlength{\itemsep}{-.01in}
+
+\item {\bf If possible, use the laboratory computers.} If it is absolutely necessary for you to work on a different
+  machine, be sure to regularly transfer your programs to the Alden machines and check their correctness. Please
+  remember that, as stated in the syllabus, students should try to complete assignments using the specialized
+  workstations in the laboratory. If you cannot use a laboratory computer, then please carefully explain the setup of
+  your laptop to a teaching assistant or the course instructor when you are asking questions.
+
+\item {\bf Follow each step carefully.} Slowly read each sentence in every assignment sheet, making sure that you
+  precisely follow each instruction. Take notes about each step that you attempt, recording your questions and ideas
+  and the challenges that you faced. If you are stuck, then please tell a teaching assistant or instructor what step
+  you recently completed.
+
+\item {\bf Regularly ask and answer questions.} Please log into Slack at the start of a class or practical session and
+  then join the appropriate channel. If you have a question about one of the steps in an assignment, then you can post
+  it to the designated channel. Or, you can ask a student sitting next to you or talk with a teaching assistant or the
+  course instructor.
+
+\item {\bf Store your files in Git}. Starting with this laboratory assignment, you will be responsible for storing all
+  of your files in a Git repository. Please verify that you have saved your source code in your Git repository by
+  typing ``{\tt git status}'' and ensuring everything is up to date.
+
+\item {\bf Keep all of your files!} Don't delete your programs, output files, and reports after you hand them in---you
+  will need them again later when you study for the quizzes and examinations and work on the other laboratory,
+  practical, and final project assignments.
+
+\item {\bf Back up your files regularly}. Use a flash drive, Google Drive, or your favorite backup method to keep a
+  copy of your files in reserve. In the event of a system failure, you are responsible for ensuring that you have
+  access to a recent backup copy of all your files.
+
+\end{itemize}
+
+\section*{Writing a New Feature Article}
+
+This assignment invites you to write an article that explains, using concrete and compelling examples, the unintended
+--- and potentially negative --- consequences associated with the prevalent use of Google products. While the last
+assignment invited you to focus on the benefits of using the Internet, this article asks you to consider the downsides.
+You are encouraged to leverage the ideas that you developed in the past two sessions in which we discussed the articles
+and podcast that you are studying for this module. After picking a partner with whom you will have an ``editor-writer''
+relationship, please publish a high-quality and error-free article by following these steps.
+
+\vspace*{-.1in}
+
+\begin{enumerate}
+
+  \itemsep 0em
+
+  \item First, you should pick a partner for this assignment. You will serve as the ``editor'' for your partner's
+    writing and your partner will be the ``editor'' for your writing. To start, please make sure that you and your
+    partner know each other's GitHub site and web site. An editor will provide feedback through the issue tracker by
+    clicking the ``Commits'' tab in GitHub's main interface, finding the commit number that contains the issue that you
+    have identified in the writing, copying this number to the clipboard, and then using it when you report the issue. A
+    writer will then consider the feedback, respond to it, and, when appropriate, resolve the issue that the editor
+    raised. While it is acceptable to read and mark printed versions of the article, all discussion should be publicly
+    visible in the GitHub issue tracker.
+
+  \item Using your terminal window, please go to the directory that contains the files for your web site. Now, find and
+    change into the {\tt \_posts} directory where you will find the sample posts that come with the template that we are
+    using for your web site. Keeping one of these files to use as an example, please delete all of the other post files
+    as they will no longer be needed. Next, using the file browser (or, the ``{\tt mv}'' command if you have experience
+    with it), rename the reserved file to one that would be appropriate for your new article. Please consider naming
+    your file according to the title that you developed during the two prior brainstorming sessions.
+
+  \item At this point, you should use the Atom text editor to change the contents of the file that you renamed in the
+    previous step. The first thing that you should do is revise the ``header'' of this file that is at the very top of
+    the editor's window. For instance, you should create a new title and subtitle for your article. Next, delete the
+    rest of the content from the prior article.
+
+  \item Your article must feature a header image that you download from Flickr. Please make sure that your image is
+    licensed under a Creative Commons license and is suitable for use in an academic setting. To start your search for a
+    header image, please go to the following web site: {\tt https://www.flickr.com/creativecommons/}. Once you have
+    found the image that you want to include on your site, you can use the ``Flickr attribution helper'' that is
+    available at {\tt https://cogdog.github.io/flickr-cc-helper/} to get the correct reference for your image. Next,
+    download your image and save it in the {\tt img/} directory of your web site. Ultimately, the image should appear at
+    the top of your article. You should also make sure that the full license statement and the credit for the image is
+    at the bottom of the article. Please see the instructor or a teaching assistant if you have questions about the
+    completion of this step.
+
+  \item After you finish modifying the header of this file you should use the ``{\tt git add}'' and ``{\tt git commit}''
+    and ``{\tt git push}'' commands to transfer your content to the GitHub servers. You should also use the ``{\tt
+    bundle exec jekyll serve}'' command to preview a local version of your web page. Now, you are ready to start
+    drafting a version of your article! As you are writing, please make sure that you write and revise in an incremental
+    fashion, committing and pushing your sentences on a regular basis --- generally, small modifications are better than
+    large ones because they make it easier for you and your editor to track and comment on your developing article. With
+    that said, please recall that once you run the ``{\tt git push}'' command your content will be ``live'' on your web
+    site. Students who want to explore a potentially better way to write that supports repeated pushing of content are
+    encouraged to review the ``GitHub Flow'' handout and talk with the course instructor about using Git branches.
+
+  \item Instead of waiting to get feedback from your editor when you have finished the entire article, you are
+    encouraged to write a draft of your content, publish it on your web site, and then request feedback from your
+    editor. At this point, you can use the GitHub issue tracker to have a conversation about the best way to improve
+    your article. You and your editor should use the issue tracker to have a thorough discussion about the strengths and
+    weaknesses of your writing. Please note that your critique is not limited to the words in the article itself! You
+    should also provide feedback about the header image, the TL;DR, the citation of the header image, and any other
+    aspect's of the web site's content and layout.
+
+  \item As you are writing, you may wonder how many words are currently in your article. If your file is called ``{\tt
+    article.md}'', then you can type ``{\tt wc -w article.md}'' in your terminal window to count the number of words in
+    your article. While this count may be slightly inaccurate, the use of this ``word count'' program is a good way to
+    estimate the length of your article.
+
+  \item Even though we will work on this assignment during at least two class sessions, you should budget enough time to
+    outline, draft, discuss, and frequently revise this writing assignment. Remember, your focus should be on publishing
+    an article that is concise, accessible, and error-free. Also, the main text of this writing assignment should be
+    accompanied by a ``TL;DR'' or a ``Too Long; Didn't Read'' that summarizes the key points about the writing. Please
+    see the instructor if you confront difficulties when using GitHub or if you have additional questions.
+
+  \item Since this is the first assignment in which you will publish a complete article, don't become frustrated if you
+    make a mistake. Instead, use your mistakes as an opportunity for learning both about the software technology that we
+    use for writing and the background and expertise of the other students in the class, the teaching assistants, and
+    the course instructor.
+
+\end{enumerate}
+
+\vspace*{-.15in}
+\section*{Summary of the Required Deliverables}
+
+This writing assignment invites you to complete the following deliverables. After completing the assignment, please make
+sure that you submit a printed version of your article to the instructor.
+
+\vspace*{-.1in}
+\begin{enumerate}
+  \setlength{\itemsep}{-.01in}
+
+  \item A 600 to 1000 word article that convincingly explains a key benefits of using the Internet.
+  \item A header image from Flickr that is released under a Creative Commons licensing agreement.
+  \item Evidence in the GitHub issue tracker for the discussion and revision of your article.
+  \item Documentation of a social media campaign that convinces your friends to read your article.
+  \item Reviews, through multiple GitHub issues and a full-featured discussion, of your peers' writing.
+
+\end{enumerate}
+\vspace*{-.1in}
+
+In adherence to the Honor Code, students should complete this assignment on an individual basis. While it is appropriate
+for students in this class to have high-level conversations about the assignment, it is necessary to distinguish
+carefully between the student who discusses the principles underlying a problem with others and the student who produces
+assignments that are identical to, or merely variations on, someone else's work. Any deliverables that are nearly
+identical to the work of others will be taken as evidence of violating Allegheny College's \mbox{Honor Code}.
+
+
+\end{document}
